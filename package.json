@@ -1,0 +1,35 @@
+{
+  "name": "nodejs-hw",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasyl-medulych/nodejs-hw.git"
+  },
+  "keywords": [],
+  "author": "Vasyl Medulych <linkinmvv@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vasyl-medulych/nodejs-hw/issues"
+  },
+  "homepage": "https://github.com/vasyl-medulych/nodejs-hw#readme",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "pino-http": "^11.0.0",
+    "pino-pretty": "^13.1.2"
+  }
+}
