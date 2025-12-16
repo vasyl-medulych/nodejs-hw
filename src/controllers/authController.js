@@ -15,6 +15,10 @@ export const registerUser = async (req, res, next) => {
   const hashedPassword = await bcrypt.hash(password, 10);
 
   const newUser = await User.create({ email, password: hashedPassword });
+
+  const newSession = await createSession(newUser._id);
+  setSessionCookies(res, newSession);
+
   res.status(201).json(newUser);
 };
 
@@ -37,7 +41,7 @@ export const loginUser = async (req, res, next) => {
 
   setSessionCookies(res, newSession);
 
-  res.status(201).json(user);
+  res.status(200).json(user);
 };
 
 export const refreshUserSession = async (req, res, next) => {
